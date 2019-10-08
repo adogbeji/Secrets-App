@@ -62,7 +62,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "https://aqueous-oasis-26509.herokuapp.com/auth/google/secrets"
+    callbackURL: "https://intense-journey-69692.herokuapp.com/auth/google/secrets"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({ googleId: profile.id }, function (err, user) {
@@ -74,7 +74,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "https://aqueous-oasis-26509.herokuapp.com/auth/facebook/secrets",
+    callbackURL: "https://intense-journey-69692.herokuapp.com/auth/facebook/secrets",
     profileFields: ["id", "name", "email"]  //Facebook will return user ID, name (first & last) and email
   },
   function(accessToken, refreshToken, profile, cb) {
@@ -87,7 +87,7 @@ passport.use(new FacebookStrategy({
 passport.use(new InstagramStrategy({
     clientID: process.env.INSTAGRAM_CLIENT_ID,
     clientSecret: process.env.INSTAGRAM_CLIENT_SECRET,
-    callbackURL: "https://aqueous-oasis-26509.herokuapp.com/auth/instagram/secrets"
+    callbackURL: "https://intense-journey-69692.herokuapp.com/auth/instagram/secrets"
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate({ instagramId: profile.id }, function (err, user) {
