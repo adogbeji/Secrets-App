@@ -1,0 +1,1 @@
+Click on the 'app.js' file to view code for my 'Secrets' app project. This is a simplified version of the iOS/Android Whisper app! Third-party Oauth2.0 login has also been enabled for greater security
