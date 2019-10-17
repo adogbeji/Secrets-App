@@ -152,9 +152,9 @@ app.get("/secrets", function(req, res) {  //This is no longer a proviledged page
 
 app.get("/submit", function(req, res) {
   if (req.isAuthenticated()) {
-    res.render("submit");  //'Submit' page can only be viewed upon successfull authentication
+    res.render("submit");  //'Submit' page can only be viewed upon successful authentication
   } else {
-    res.render("/login");  //otherwise... they'll be redirected to the 'login' page
+    res.redirect("/login");  //otherwise... they'll be redirected to the 'login' page
   }
 });
 
